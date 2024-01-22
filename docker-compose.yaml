@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  # Vue.js frontend service
+  vue-app:
+    build:
+      context: ../Sentrysk Frontend/
+    ports:
+      - "8080:8080"
+    depends_on:
+      - flask-app
+
+  # Flask backend service
+  flask-app:
+    build:
+      context: ../Sentrysk Backend/
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongo-db
+
+  # MongoDB service
+  mongo-db:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: your_mongo_admin_password
+      MONGO_INITDB_DATABASE: dashboard
+    volumes:
+      - mongodb_data:/data/db
+
+volumes:
+  mongodb_data:
+    driver: local
