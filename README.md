@@ -2,8 +2,8 @@
 With this repo you can set up *Sentrysk Dasbord* with Docker.
 
 This docker-compose file includes:
-- Sentrysk Backend
-- Sentrysk Endpoint
+- [Sentrysk Backend](https://github.com/sentrysk/Sentrysk-Backend)
+- [Sentrysk Frontend](https://github.com/sentrysk/Sentrysk-Frontend)
 - MongoDB
 - Load Balancer
 
