@@ -6,3 +6,5 @@ This docker-compose file includes:
 - Sentrysk Endpoint
 - MongoDB
 - Load Balancer
+
+First thing first, you need to pull the **Sentrysk Frontend** and **Sentrysk Backend** projects to upper folder.
