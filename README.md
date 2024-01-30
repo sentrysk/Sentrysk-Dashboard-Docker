@@ -10,6 +10,7 @@ This docker-compose file includes:
 # How to Run
 First thing first, you need to pull the **[Sentrysk Backend](https://github.com/sentrysk/Sentrysk-Backend)** and **[Sentrysk Frontend](https://github.com/sentrysk/Sentrysk-Frontend)** projects to upper folder.
 
+PS: Skip this steps if you already download these repos.
 ```
 git clone https://github.com/sentrysk/Sentrysk-Backend
 ```
