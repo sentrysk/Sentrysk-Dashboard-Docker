@@ -27,7 +27,12 @@ git clone https://github.com/sentrysk/Sentrysk-Frontend
 git clone https://github.com/sentrysk/Sentrysk-Dashboard-Docker
 ```
 
-- Step 4: Docker Up
+- Step 4: Enter the **Sentrysk-Dashboard-Docker** folder
+```
+cd Sentrysk-Dashboard-Docker
+```
+
+- Step 5: Docker Up
 ```
 docker-compose up
 ```
