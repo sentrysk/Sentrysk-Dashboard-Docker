@@ -26,3 +26,8 @@ git clone https://github.com/sentrysk/Sentrysk-Frontend
 ```
 git clone https://github.com/sentrysk/Sentrysk-Dashboard-Docker
 ```
+
+- Step 4: Docker Up
+```
+docker-compose up
+```
