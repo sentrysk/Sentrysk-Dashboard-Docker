@@ -36,3 +36,18 @@ cd Sentrysk-Dashboard-Docker
 ```
 docker-compose up
 ```
+
+# Changing Backend Replica Count
+If you'd like to change backend replica count you should change **deploy -> replicas** value.
+```
+  # Flask backend service
+  flask-app:
+    build:
+      context: ../Sentrysk Backend/
+    ports:
+      - "5000"
+    depends_on:
+      - mongo-db
+    deploy:
+      replicas: 3
+```
