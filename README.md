@@ -11,13 +11,13 @@ This docker-compose file includes:
 # How to Run
 First thing first, you need to pull the Projects below to the upper folder. 
 
-**[Sentrysk Backend](https://github.com/sentrysk/Sentrysk-Backend)**
-**[Sentrysk Frontend](https://github.com/sentrysk/Sentrysk-Frontend)** 
-**[Scheduled Jobs](https://github.com/sentrysk/Sentrysk-Scheduled-Jobs)**
+- **[Sentrysk Backend](https://github.com/sentrysk/Sentrysk-Backend)**
+- **[Sentrysk Frontend](https://github.com/sentrysk/Sentrysk-Frontend)** 
+- **[Scheduled Jobs](https://github.com/sentrysk/Sentrysk-Scheduled-Jobs)**
 
-Or you can change dockerfile to give the path of the projects folder.
+Or you can change **Dockerfile** to give the path of the projects folder.
 
-PS: Skip step 1 and 2 if you already download these repos.
+PS: Skip step 1, 2 and 3 if you already downloaded above repos.
 
 - Step 1: Pull the Backend
 ```
@@ -48,6 +48,7 @@ cd Sentrysk-Dashboard-Docker
 ```
 docker-compose up
 ```
+PS: Git clone may convert your project folder names like hyphened **Sentrysk-Frontend**, you may want to remove hyphens or change project folder names in **Dockerfile**
 
 # Changing Backend Replica Count
 If you'd like to change backend replica count you should change **deploy -> replicas** value.
