@@ -42,6 +42,13 @@ services:
       MONGO_INITDB_DATABASE: dashboard
     volumes:
       - mongodb_data:/data/db
+  
+  # Scheduled Jobs Services
+  scheduled-jobs:
+    build:
+      context: ../Sentrysk Scheduled Jobs/
+    depends_on:
+      - flask-app
 
 volumes:
   mongodb_data:
