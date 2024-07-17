@@ -4,11 +4,18 @@ With this repo you can set up **Sentrysk Dasbord** with Docker.
 This docker-compose file includes:
 - [Sentrysk Backend](https://github.com/sentrysk/Sentrysk-Backend)
 - [Sentrysk Frontend](https://github.com/sentrysk/Sentrysk-Frontend)
+- [Scheduled Jobs](https://github.com/sentrysk/Sentrysk-Scheduled-Jobs)
 - MongoDB
 - Load Balancer(Nginx)
 
 # How to Run
-First thing first, you need to pull the **[Sentrysk Backend](https://github.com/sentrysk/Sentrysk-Backend)** and **[Sentrysk Frontend](https://github.com/sentrysk/Sentrysk-Frontend)** projects to upper folder.
+First thing first, you need to pull the Projects below to the upper folder. 
+
+**[Sentrysk Backend](https://github.com/sentrysk/Sentrysk-Backend)**
+**[Sentrysk Frontend](https://github.com/sentrysk/Sentrysk-Frontend)** 
+**[Scheduled Jobs](https://github.com/sentrysk/Sentrysk-Scheduled-Jobs)**
+
+Or you can change dockerfile to give the path of the projects folder.
 
 PS: Skip step 1 and 2 if you already download these repos.
 
@@ -22,7 +29,12 @@ git clone https://github.com/sentrysk/Sentrysk-Backend
 git clone https://github.com/sentrysk/Sentrysk-Frontend
 ```
 
-- Step 3: Pull the Docker Compose File
+- Stel 3: Pull the Scheduled Jobs
+```
+git clone https://github.com/sentrysk/Sentrysk-Scheduled-Jobs
+```
+
+- Step 4: Pull this Dockerized Project
 ```
 git clone https://github.com/sentrysk/Sentrysk-Dashboard-Docker
 ```
@@ -50,4 +62,13 @@ If you'd like to change backend replica count you should change **deploy -> repl
       - mongo-db
     deploy:
       replicas: 3
+```
+
+PS: if you change the replica count you must change the nginx conf as well.
+```
+    upstream flask-app {
+        server flask-app:5000;
+        server flask-app:5000;
+        server flask-app:5000;
+    }
 ```
